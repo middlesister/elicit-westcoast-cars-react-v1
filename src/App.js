@@ -1,6 +1,7 @@
 // 1. Importera React ...
 import React from "react";
 
+import Vehicles from "./components/Vehicles";
 import "./app.css";
 
 // 2. Skapa komponenten
@@ -25,48 +26,7 @@ const App = () => {
         </div>
       </header>
       <main className="content">
-        <section className="card">
-          <div className="vehicle-item">
-            <img 
-              src="https://i.postimg.cc/N09fbtKZ/car1.jpg"
-              alt=""
-              className="thumbnail" 
-            />
-            <div>ABC123</div>
-            <div>Chevrolet</div>
-            <div>Corvette</div>
-            <div>2019</div>
-            <div>150000</div>
-          </div>
-        </section>
-        <section className="card">
-          <div className="vehicle-item">
-            <img 
-              src="https://i.postimg.cc/N09fbtKZ/car1.jpg"
-              alt=""
-              className="thumbnail" 
-            />
-            <div>ABC123</div>
-            <div>Chevrolet</div>
-            <div>Corvette</div>
-            <div>2019</div>
-            <div>150000</div>
-          </div>
-        </section>
-        <section className="card">
-          <div className="vehicle-item">
-            <img 
-              src="https://i.postimg.cc/N09fbtKZ/car1.jpg"
-              alt=""
-              className="thumbnail" 
-            />
-            <div>ABC123</div>
-            <div>Chevrolet</div>
-            <div>Corvette</div>
-            <div>2019</div>
-            <div>150000</div>
-          </div>
-        </section>
+        <Vehicles />
       </main>
     </section>
   ); // JSX
