@@ -5,7 +5,6 @@ import './card.css';
 
 // 2. Skapa komponenten
 const Card = (props) => {
-  console.log(props)
   return <section className="card">{props.children}</section>;
 };
 
