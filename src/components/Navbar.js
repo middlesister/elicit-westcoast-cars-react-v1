@@ -5,12 +5,20 @@ import "./navbar.css";
 
 // 2. Skapa komponenten
 class Navbar extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      title: "West coast ",
+    };
+  }
+
   render() {
     return (
       <header>
         <div className="navbar" id="navbar">
           <h1 className="logo">
-            <span className="text-primary">Westcoast</span> Cars
+            <span className="text-primary">{this.state.title}</span> Cars
           </h1>
           <ul>
             <li>
