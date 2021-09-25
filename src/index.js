@@ -7,7 +7,16 @@ if(module.hot) {
 }
 // 2. Skapa en React komponent
 const App = () => {
-    return <div style={{ fontWeight: 'bold', color: 'red' }}>Hello from React!!</div> // JSX
+    return (
+        <section>
+            <div style={{ fontWeight: 'bold', color: 'red' }}>Hello from React!!</div>
+            <div>
+                <label htmlFor="firstName">Name:</label>
+                <input type="text" id="firstName"/>
+            </div>
+
+        </section>
+    )
 }
 
 // 3. Visa komponenten i webbläsaren
