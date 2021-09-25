@@ -6,38 +6,15 @@ import Card from "./shared/Card";
 
 // 2. Skapa komponenten
 const Vehicles = () => {
-  const [registrationNumber, setRegistrationNumber] = useState("ABC123");
-  const [make, setMake] = useState("Ford");
-
-  function onRegNoChange(event) {
-    setRegistrationNumber(event.target.value);
-    console.log(registrationNumber);
-  }
-
-  function onMakeChange(event) {
-    setMake(event.target.value);
-    console.log(make);
-  }
-
   return (
     <div>
       <section className="vehicle-form mb-6">
         <form>
           <div className="mb-3">
-            <input
-              onChange={onRegNoChange}
-              type="text"
-              value={registrationNumber}
-              placeholder="Registreringsnummer"
-            />
+            <input type="text" placeholder="Registreringsnummer" />
           </div>
           <div className="mb-3">
-            <input
-              onChange={onMakeChange}
-              type="text"
-              value={make}
-              placeholder="Tillverkare"
-            />
+            <input type="text" placeholder="Tillverkare" />
           </div>
           <div className="mb-3">
             <input type="text" placeholder="Modell" />
