@@ -11,6 +11,11 @@ const VehicleDetail = (props) => {
     setDisplayMileage(!displayMileage);
   };
 
+  let mileage;
+  if (displayMileage) {
+    mileage = <div>{props.mileage}</div>;
+  }
+
   return (
     <div className="vehicle-item">
       <img src={props.imageUrl} alt={props.make} className="thumbnail" />
@@ -19,9 +24,9 @@ const VehicleDetail = (props) => {
       <div>{props.model}</div>
       <div>{props.modelYear}</div>
       <button onClick={onClick} className="btn btn-outline-rounded">
-        {displayMileage ? "Visa" : "Göm"} antal km
+        {displayMileage ? "Göm" : "Visa"} antal km
       </button>
-      <div>{props.mileage}</div>
+      {mileage}
     </div>
   );
 };
