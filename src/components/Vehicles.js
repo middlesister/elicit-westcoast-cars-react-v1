@@ -2,16 +2,15 @@
 import React from "react";
 
 import VehicleDetail from "./VehicleDetail";
+import Card from "./shared/Card";
 
 // 2. Skapa komponenten
 const Vehicles = () => {
   return (
     <section>
-      <VehicleDetail />
-      <VehicleDetail />
-      <VehicleDetail />
-      <VehicleDetail />
-      <VehicleDetail />
+      <Card>
+        <VehicleDetail />
+      </Card>
     </section>
   );
 };

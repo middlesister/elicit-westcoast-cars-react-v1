@@ -1,0 +1,11 @@
+// 1. Importera React
+import React from "react";
+
+// 2. Skapa komponenten
+const Card = (props) => {
+  console.log(props)
+  return <section className="card">{props.children}</section>;
+};
+
+// 3. Exportera komponenten
+export default Card;
