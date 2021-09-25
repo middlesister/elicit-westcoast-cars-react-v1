@@ -6,7 +6,7 @@ import Card from "./shared/Card";
 
 // 2. Skapa komponenten
 const Vehicles = () => {
-  let vehicles = [];
+  const [vehicles, setVehicles] = useState([]);
 
   const [userInput, setUserInput] = useState({
     regNo: "",
@@ -39,7 +39,7 @@ const Vehicles = () => {
       return vehicle;
     });
 
-    vehicles = currentVehicles;
+    setVehicles(currentVehicles);
   };
 
   useEffect(() => {
