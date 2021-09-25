@@ -1,14 +1,14 @@
 // 1. Importera React
-import React from "react";
+import React, { useState } from "react";
 
 import "./vehicledetail.css";
 
 // 2. Skapa komponenten
 const VehicleDetail = (props) => {
-  let displayMileage = false;
+  const [displayMileage, setDisplayMileage] = useState(false);
 
   const onClick = () => {
-    displayMileage = !displayMileage;
+    setDisplayMileage(!displayMileage);
   };
 
   return (
@@ -19,7 +19,7 @@ const VehicleDetail = (props) => {
       <div>{props.model}</div>
       <div>{props.modelYear}</div>
       <button onClick={onClick} className="btn btn-outline-rounded">
-        {{ displayMileage } ? "Visa" : "Göm"} antal km{" "}
+        {displayMileage ? "Visa" : "Göm"} antal km
       </button>
       <div>{props.mileage}</div>
     </div>
