@@ -4,19 +4,20 @@ import React from "react";
 import './vehicledetail.css';
 
 // 2. Skapa komponenten
-const VehicleDetail = () => {
+const VehicleDetail = (props) => {
+	console.log(props);
   return (
     <div className="vehicle-item">
       <img
-        src="https://i.postimg.cc/N09fbtKZ/car1.jpg"
-        alt=""
+        src={props.imageUrl}
+        alt={props.make}
         className="thumbnail"
       />
-      <div>ABC123</div>
-      <div>Chevrolet</div>
-      <div>Corvette</div>
-      <div>2019</div>
-      <div>150000</div>
+      <div>{props.registrationNo}</div>
+      <div>{props.make}</div>
+      <div>{props.model}</div>
+      <div>{props.modelYear}</div>
+      <div>{props.mileage}</div>
     </div>
   );
 };
