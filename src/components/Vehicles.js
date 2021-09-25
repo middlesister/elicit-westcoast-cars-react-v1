@@ -1,15 +1,22 @@
 // 1. Importera React
-import React from "react";
+import React, { useState } from "react";
 
 import VehicleDetail from "./VehicleDetail";
 import Card from "./shared/Card";
 
 // 2. Skapa komponenten
 const Vehicles = () => {
-  let regNo = "";
+  const [registrationNumber, setRegistrationNumber] = useState("ABC123");
+  const [make, setMake] = useState("Ford");
 
   function onRegNoChange(event) {
-    this.regNo = event.target.value;
+    setRegistrationNumber(event.target.value);
+    console.log(registrationNumber);
+  }
+
+  function onMakeChange(event) {
+    setMake(event.target.value);
+    console.log(make);
   }
 
   return (
@@ -20,11 +27,17 @@ const Vehicles = () => {
             <input
               onChange={onRegNoChange}
               type="text"
+              value={registrationNumber}
               placeholder="Registreringsnummer"
             />
           </div>
           <div className="mb-3">
-            <input type="text" placeholder="Tillverkare" />
+            <input
+              onChange={onMakeChange}
+              type="text"
+              value={make}
+              placeholder="Tillverkare"
+            />
           </div>
           <div className="mb-3">
             <input type="text" placeholder="Modell" />
