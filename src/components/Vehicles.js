@@ -1,12 +1,33 @@
 // 1. Importera React
-import React from "react";
+import React, { useState } from "react";
 
 import VehicleDetail from "./VehicleDetail";
 import Card from "./shared/Card";
 
 // 2. Skapa komponenten
 const Vehicles = () => {
-  const vehicles = [
+  const [userInput, setUserInput] = useState({
+    regNo: "",
+    make: "",
+  });
+
+  const registrationNumberChangeHandler = (event) => {
+    console.log(event.target.value);
+    setUserInput({
+      ...userInput,
+      regNo: event.target.value,
+    });
+  };
+
+  const makeChangeHandler = (event) => {
+    console.log(event.target.value);
+    setUserInput({
+      ...userInput,
+      make: event.target.value,
+    });
+  };
+
+  let vehicles = [
     {
       id: 1,
       registrationNo: "ABC123",
@@ -69,10 +90,20 @@ const Vehicles = () => {
       <section className="vehicle-form mb-6">
         <form>
           <div className="mb-3">
-            <input type="text" placeholder="Registreringsnummer" />
+            <input
+              type="text"
+              onChange={registrationNumberChangeHandler}
+              value={userInput.regNo}
+              placeholder="Registreringsnummer"
+            />
           </div>
           <div className="mb-3">
-            <input type="text" placeholder="Tillverkare" />
+            <input
+              type="text"
+              onChange={makeChangeHandler}
+              value={userInput.make}
+              placeholder="Tillverkare"
+            />
           </div>
           <div className="mb-3">
             <input type="text" placeholder="Modell" />
