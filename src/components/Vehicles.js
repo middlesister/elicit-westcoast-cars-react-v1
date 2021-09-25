@@ -83,7 +83,7 @@ const Vehicles = () => {
         {/* Create a new Card and VehicleDetail for each item in our list */}
         {vehicles.map((vehicle) => {
           return (
-            <Card>
+            <Card key={vehicle.id}>
               <VehicleDetail
                 registrationNo={vehicle.registrationNo}
                 imageUrl={vehicle.imageUrl}
