@@ -5,11 +5,11 @@ import "./vehicledetail.css";
 
 // 2. Skapa komponenten
 const VehicleDetail = (props) => {
-	let displayMileage = false;
+  let displayMileage = false;
 
-	const onClick = () => {
-		displayMileage = !displayMileage;
-	}
+  const onClick = () => {
+    displayMileage = !displayMileage;
+  };
 
   return (
     <div className="vehicle-item">
@@ -18,7 +18,9 @@ const VehicleDetail = (props) => {
       <div>{props.make}</div>
       <div>{props.model}</div>
       <div>{props.modelYear}</div>
-      <button onClick={onClick} className="btn btn-outline-rounded">{ {displayMileage} ? 'Visa' : 'Göm' } antal km </button>
+      <button onClick={onClick} className="btn btn-outline-rounded">
+        {{ displayMileage } ? "Visa" : "Göm"} antal km{" "}
+      </button>
       <div>{props.mileage}</div>
     </div>
   );
